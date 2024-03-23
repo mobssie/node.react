@@ -12,17 +12,12 @@ const todoList = [{
   done: false
 }];
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
-
 app.get('/api/todo', (req, res) => {
   res.json(todoList)
 })
 
 app.post('/api/todo', (req, res) => {
-  const { test, done } = req.body
+  const { test, done } = req.body;
   todoList.push({
     id: id++,
     test,
