@@ -20,7 +20,7 @@ app.get('/api/todo', (req, res) => {
 })
 
 app.post('/api/todo', (req, res) => {
-  const { test, done } = req.body;
+  const { text, done } = req.body;
   todoList.push({
     id: id++,
     text,
